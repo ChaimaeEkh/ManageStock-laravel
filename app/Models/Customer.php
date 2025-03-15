@@ -21,7 +21,7 @@ class Customer extends Model
         return $this->hasMany(Order::class);
     }
 
-    public function transaction(): MorphMany 
+    public function sale(): MorphMany 
     {
         return $this->morphMany(Transaction::class, 'transactable');
     }

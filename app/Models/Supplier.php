@@ -22,8 +22,9 @@ class Supplier extends Model
         return $this->hasMany(Product::class);
     }
 
-    public function transactions(): MorphMany 
+    public function purshase(): MorphMany 
     {
         return $this->morphMany(Transaction::class, 'transactable');
     }
+    
 }
